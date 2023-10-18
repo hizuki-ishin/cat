@@ -13,14 +13,6 @@ const IndexPage: NextPage<Props> = ({ initialImageUrl }) => {
     const [imageUrl, setImageUrl] = useState(initialImageUrl); // 初期値を渡す
     const [loading, setLoading] = useState(false); // 初期状態はfalseにしておく
 
-    // useEffect(() => {
-    //     fetchImage().then((newImage) => {
-    //         setImageUrl(newImage.url)
-    //         setLoading(false)
-    //     }
-    //     )
-    // }, [])
-
     // ボタンをクリックしたときに画像を読み込む処理
     const handleClick = async () => {
         setLoading(true); // 読込中フラグを立てる
@@ -36,7 +28,7 @@ const IndexPage: NextPage<Props> = ({ initialImageUrl }) => {
     return (
         <div className={styles.page}>
             <button onClick={handleClick} className={styles.button}>
-                他のにゃんこも見る
+                他のにゃんこも見る!!!
             </button>
             <div className={styles.page}>
                 {loading || <img src={imageUrl} className={styles.img} />}</div>
